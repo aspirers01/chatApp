@@ -54,7 +54,7 @@ const registerController = async (req, res) => {
       .send({ success: true, message: "registration succesfull please login" });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ message: "Server error" });
+    return res.status(500).json({ message: "Server error " });
   }
 };
 

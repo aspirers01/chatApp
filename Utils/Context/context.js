@@ -4,9 +4,9 @@ export const GlobalContext = createContext(null);
 
 function GlobalState({ children }) {
   const [name, setName] = useState("");
-  const [showlogin, setShowLogin] = useState(false);
+
   return (
-    <GlobalContext.Provider value={{ name, showlogin, setShowLogin, setName }}>
+    <GlobalContext.Provider value={{ name, setName }}>
       {children}
     </GlobalContext.Provider>
   );
