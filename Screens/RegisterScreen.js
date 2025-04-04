@@ -1,20 +1,35 @@
+import { useContext, useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { GlobalContext } from "../Utils/Context/context";
 
 function RegisterScreen(props) {
+  const { name, setName, showlogin, setShowLogin } = useContext(GlobalContext);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <>
       <View style={styles.container}>
         <Text style={styles.title}>Register</Text>
-        <TextInput style={styles.input} placeholder="Username" />
+        <TextInput
+          style={styles.input}
+          placeholder="Username"
+          value={username}
+          onChange={setUsername}
+        />
         <TextInput
           style={styles.input}
           placeholder="Email"
           keyboardType="email-address"
+          value={email}
+          onChange={setEmail}
         />
         <TextInput
           style={styles.input}
           placeholder="Password"
           secureTextEntry
+          value={password}
+          onChange={setPassword}
         />
         <Button title="Register" onPress={() => {}} />
         <View>
