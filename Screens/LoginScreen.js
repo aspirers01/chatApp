@@ -7,7 +7,7 @@ import { GlobalContext } from "../Utils/Context/context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 function LoginScreen(props) {
-  const { name, setName } = useContext(GlobalContext);
+  const { setName } = useContext(GlobalContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
